@@ -1,0 +1,22 @@
+<form method="post">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	<% flash.each do |key, value| %>
+      <div class="<%= flash_class(key) %>">
+            <%= value %>
+      </div>
+<% end %>
+	<div class="form-group">
+    <label for="formGroupExampleInput">first name</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="first_name" name="first_name">
+		</div>
+		<div class="form-group">
+    <label for="formGroupExampleInput">Last name</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Last name" name="last_name">
+		</div>
+		 <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
